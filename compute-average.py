@@ -7,7 +7,7 @@ import json
 
 def compute_average(data):
 
-    out_data = data.groupby(['structureID','nodeID']).mean().reset_index()
+    out_data = data.groupby(['structureID']).mean().reset_index()
 
     return data
 
