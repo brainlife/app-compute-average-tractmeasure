@@ -8,8 +8,9 @@ import json
 def compute_average(data):
 
     out_data = data.groupby(['structureID']).mean().reset_index()
+    out_data = out_data.drop(columns={'nodeID'})
 
-    return data
+    return out_data
 
 def main():
     
